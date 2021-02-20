@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS haven_db;
+
+CREATE DATABASE haven_db;
+
