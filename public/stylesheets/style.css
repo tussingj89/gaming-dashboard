@@ -69,3 +69,7 @@
     opacity: 0.4;
   }
 }
+
+.centered {
+    margin: 10% 50% 49% 50%;
+}
