@@ -2,39 +2,41 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Login</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class= body4>
   <nav>
-    <div class="nav-wrapper red-text text-darken-1 cyan">
-      <a href="#" class="brand-logo left neon" data-text="U">GA<span class="flicker-slow">M</span>E<span class="flicker-fast">H</span>AVEN</a>
+    <div class="nav-wrapper cyan">
+      <a href="index.html" class="brand-logo left neon" data-text="U">GA<span class="flicker-slow">M</span>E<span class="flicker-fast">H</span>AVEN</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="signup.html">Sign Up Now!</a></li>
+        <li><a href="search.html">Search</a></i>
       </ul>
     </div>
   </nav>
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-6 col-md-offset-3 blue-text text-accent-2">
         <h2>Login Form</h2>
-        <form class="login">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
+        <form class="login center">
+          <div class="form-group center">
+            <input type="email" class="black form-control blue-text text-accent-2" id="email-input" placeholder="Email Address">
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          <div class="form-group center">
+            <input type="password" class="black form-control blue-text text-accent-2" id="password-input" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-default">Login</button>
+          <button type="submit" class="btn btn-default ">Login</button>
         </form>
         <br />
-        <p>Or sign up <a href="/">here</a></p>
+        <p>Or sign up <a href="signup.html">Here!</a></p>
       </div>
     </div>
   </div>

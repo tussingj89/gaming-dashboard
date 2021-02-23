@@ -1,36 +1,71 @@
-body { 
-    background: url("../assets/gamehaven.jpg") no-repeat center center fixed; 
+.body1 {
+  background: url("../assets/gamehaven.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Turret Road", cursive;
+}
+
+.body2 {
+  background: url("../assets/station.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Turret Road", cursive;
+}
+.body3 {
+  background: url("../assets/play.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Turret Road", cursive;
+}
+.body4 {
+  background: url("../assets/keyboard.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Turret Road", cursive;
+}
+.body5 {
+    background: url("../assets/here.jpg") no-repeat center center fixed;
     background-size: cover;
-    font-family: 'DotGothic16', sans-serif;
+    font-family: "Turret Road", cursive;
   }
-  .neon{
-    font-family: 'Monoton', cursive;
-    font-size:130px;
-    color: #FFD5FF;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 400;
-    letter-spacing: 8px;
-    text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA,40px 0vw 200px #D42CCA;
+
+.neon {
+  font-family: "Turret Road", cursive;
+  font-size: 130px;
+  color: #ffd5ff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  letter-spacing: 8px;
+  text-shadow: 1px 0px 4px #ffd5ff, 2px 0px 4px #ffd5ff, 3px 0px 4px #ffd5ff,
+    2px 0px 3px #d42cca, 2px 3px 15px #d42cca, 2px 0px 15px, 5px 0px 125px,
+    20px 0vw 200px #d42cca, 40px 0vw 200px #d42cca;
+}
+
+.flicker-slow {
+  animation: flicker 3s linear infinite;
+}
+
+.flicker-fast {
+  animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    //text-shadow: none;
+    opacity: 0.99;
   }
-  
-  .flicker-slow{
-    animation: flicker 3s linear infinite;
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
   }
-  
-  .flicker-fast{
-    animation: flicker 1s linear infinite;
-  }
-  
-  @keyframes flicker {
-      0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-          //text-shadow: none;
-      opacity: .99;
-          
-      }
-      20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-          opacity: 0.4;
-      }
-  }
+}
