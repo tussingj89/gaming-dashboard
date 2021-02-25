@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  const Games = sequelize.define("Games", {
+  const games = sequelize.define("games", {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -7,20 +7,24 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    body: {
+    review: {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
+    },
+    rating: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   });
 
-  Games.associate = function(models) {
-    Games.belongsTo(models.Platform, {
+  games.associate = function(models) {
+    games.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       }
     });
   };
 
-  return Games;
+  return games;
 };
