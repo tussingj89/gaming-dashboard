@@ -15,6 +15,10 @@ module.exports = function(sequelize, DataTypes) {
     rating: {
       type: DataTypes.INTEGER,
       allowNull: false
+    },
+    played: {
+      type: datatypes.BOOLEAN,
+      default: false
     }
   });
 
