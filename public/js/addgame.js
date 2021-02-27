@@ -37,7 +37,7 @@ $(document).ready(() => {
   }
   function submitPost(games) {
     $.post("/api/games", games, () => {
-      window.location.href = "/profile";
+      window.location.href = "/profile.html";
     });
   }
   function updatePost(games) {
@@ -46,7 +46,7 @@ $(document).ready(() => {
       url: "/api/games",
       data: games
     }).then(() => {
-      window.location.href = "/profile";
+      window.location.href = "/profile.html";
     });
   }
 });
