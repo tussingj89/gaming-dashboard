@@ -20,50 +20,21 @@
   </header>
 
   <div class="container">
-    <h1 class="text-center">Profile!</h1>
+    <h1 class="text-center">public reviews!</h1>
 
-
-    <div class="row">
-      <div class="col">
-        <h2 class="red-text">Future played!</h2>
-        <ul id="not-played">
+        <ul id="public-reviews">
           {{#each games}}
-          {{#unless this.played}}
           <li>
             <p><span class="label">Title:</span> {{this.game_title}}</p>
             <p><span class="label">platform:</span> {{this.game_platform}}</p>
-
-            <button class="played" value={{this.id}} data-id={{this.id}}>
-              played!
-            </button>
+            <p><span class="label">review:</span> {{this.game_review}}</p>
+            <p><span class="label">rating:</span> {{this.game_rating}}</p>
 
           </li>
-          {{/unless}}
           {{/each}}
 
         </ul>
       </div>
-
-      <div class="col">
-        <h2 class="red-text">Games plays!</h2>
-
-        <ul id="played">
-          {{#each games}}
-          {{#if played}}
-          <li>
-            <p><span class="label">Title:</span> {{this.game_title}}</p>
-            <p><span class="label">Review:</span> {{this.game_review}}</p>
-            <p><span class="label">Rating:</span> {{this.game_rating}}</p>
-            
-            <button class="edit" value={{this.id}} data-id={{this.id}}>
-              edit
-            </button>
-          </li>
-          {{/if}}
-          {{/each}}
-        </ul>
-      </div>
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/profile.js"></script>
 </body>
