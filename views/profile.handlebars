@@ -30,8 +30,8 @@
           {{#each games}}
           {{#unless this.played}}
           <li>
-            <p><span class="label">Title:</span> {{this.game_title}}</p>
-            <p><span class="label">platform:</span> {{this.game_platform}}</p>
+            <p><span class="label">Title:</span> {{this.dataValues.title}}</p>
+            <p><span class="label">platform:</span> {{this.dataValues.platform}}</p>
 
             <button class="played" value={{this.id}} data-id={{this.id}}>
               played!
@@ -51,9 +51,9 @@
           {{#each games}}
           {{#if played}}
           <li>
-            <p><span class="label">Title:</span> {{this.game_title}}</p>
-            <p><span class="label">Review:</span> {{this.game_review}}</p>
-            <p><span class="label">Rating:</span> {{this.game_rating}}</p>
+            <p><span class="label">Title:</span> {{this.dataValues.title}}</p>
+            <p><span class="label">Review:</span> {{this.dataValues.review}}</p>
+            <p><span class="label">Rating:</span> {{this.dataValues.rating}}</p>
             
             <button class="edit" value={{this.id}} data-id={{this.id}}>
               edit

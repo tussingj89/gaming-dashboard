@@ -29,20 +29,9 @@ module.exports = function(app) {
     res.render("signup");
   });
 
-  app.get("/profile.html", (req, res) => {
-    if (req.user) {
-      res.render("profile");
-    }
-  });
-
   app.get("/addgame.html", (req, res) => {
     if (req.user) {
       res.render("addgame");
-    }
-  });
-  app.get("/gamepage.html", (req, res) => {
-    if (req.user) {
-      res.render("gamepage");
     }
   });
 

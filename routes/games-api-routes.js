@@ -3,21 +3,25 @@ const db = require("../models");
 module.exports = function(app) {
   // GET route for getting all of the games
   app.get("/gamepage.html", (req, res) => {
-    db.games.selectAll(data => {
-      const games = {
-        games: data
-      };
-      console.log(hbsObject);
-      res.render("gamepage", games);
+    db.games.findAll({}).then(data => {
+      console.log(data);
+      // console.log(dataValues);
+      // res.json(data);
+      res.render("gamepage", { games: data });
     });
   });
+
   app.get("/profile.html", (req, res) => {
-    db.games.selectAll({
-      where: {
-        UserId: req.user.id
-      }
-    });
-    res.render("profile", games);
+    db.games
+      .findAll({
+        where: {
+          UserId: req.user.id
+        }
+      })
+      .then(data => {
+        console.log(data);
+        res.render("profile", { games: data });
+      });
   });
   // POST route for saving a new post
   app.post("/api/games", (req, res) => {
@@ -26,6 +30,7 @@ module.exports = function(app) {
       .create({
         title: req.body.title,
         review: req.body.review,
+        platform: req.body.platform,
         rating: req.body.rating,
         UserId: req.user.id
       })

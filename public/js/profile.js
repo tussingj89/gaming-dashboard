@@ -17,14 +17,18 @@ $(() => {
       location.reload();
     });
   });
-});
 
-$(document).ready(() => {
-  const logout = "logout.html";
-  logout.on("/logout", event => {
-    event.req.logout();
-    res.redirect("/");
-  });
+  $(".edit").on("click", updategame);
+  const id = $(this).data("id");
 
-  $(".sidenav").sidenav();
+  function updategame() {
+    $.ajax("/api/games/" + id, {
+      type: "PUT",
+      data: games
+    }).then(() => {
+      console.log("changed played to true");
+      // Reload the page to get the updated list
+      location.reload();
+    });
+  }
 });

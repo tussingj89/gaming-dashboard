@@ -34,6 +34,9 @@
   background-size: cover;
   font-family: "Turret Road", cursive;
 }
+.container { 
+background-color: lightblue;
+}
 .neon {
   font-family: "Turret Road", cursive;
   font-size: 130px;
