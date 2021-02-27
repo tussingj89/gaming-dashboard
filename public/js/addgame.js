@@ -7,6 +7,14 @@ $(document).ready(() => {
   $(cmsForm).on("submit", handleFormSubmit);
   let gameId;
 
+  $(".sidenav").sidenav();
+
+  const logout = "logout.html";
+  logout.on("/logout", event => {
+    event.req.logout();
+    res.redirect("/");
+  });
+
   // Sets a flag for whether or not we're updating a post to be false initially
   const updating = false;
 

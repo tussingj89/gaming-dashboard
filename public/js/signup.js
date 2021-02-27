@@ -40,3 +40,7 @@ $(document).ready(() => {
     $("#alert").fadeIn(500);
   }
 });
+
+$(document).ready(() => {
+  $(".sidenav").sidenav();
+});
