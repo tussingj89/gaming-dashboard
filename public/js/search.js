@@ -7,6 +7,9 @@
 // const platformsURL =
 // "https://rawg-video-games-database.p.rapidapi.com/platforms";
 
+//   $(document).ready(() => {
+// $(".sidenav").sidenav();
+//   });
 // // function searchObject(name) {
 //   for (i = 0; i < searchResults.length; i++) {
 //     if (searchResults[i].name === name) {
