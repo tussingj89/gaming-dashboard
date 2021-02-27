@@ -20,11 +20,20 @@
   font-family: "Turret Road", cursive;
 }
 .body5 {
-    background: url("../assets/here.jpg") no-repeat center center fixed;
-    background-size: cover;
-    font-family: "Turret Road", cursive;
-  }
-
+  background: url("../assets/here.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Turret Road", cursive;
+}
+.body6 {
+  background: url("../assets/games.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Turret Road", cursive;
+}
+.body7 {
+  background: url("../assets/profile.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Turret Road", cursive;
+}
 .neon {
   font-family: "Turret Road", cursive;
   font-size: 130px;
@@ -57,7 +66,7 @@
   64.999%,
   70%,
   100% {
-    //text-shadow: none;
+    text-shadow: none;
     opacity: 0.99;
   }
   20%,
@@ -71,5 +80,5 @@
 }
 
 .centered {
-    margin: 10% 50% 49% 50%;
+  margin: 10% 50% 49% 50%;
 }

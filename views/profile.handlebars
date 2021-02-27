@@ -1,0 +1,62 @@
+<body class="body7">
+  <header>
+    <nav>
+      <div class="nav-wrapper cyan">
+        <a href="/" class="brand-logo left neon" data-text="U">GA<span class="flicker-slow">M</span>E<span
+            class="flicker-fast">H</span>AVEN</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li>
+          <a href="members.html">Members Lounge</a>
+        </li>
+         <li>
+          <a href="games.html">Game List</a>
+        </li>
+      </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="text-center">profile!</h1>
+
+
+    <div class="row">
+      <div class="col">
+        <h2>Future played!</h2>
+        <ul id="not-played">
+          {{#each games}}
+          {{#unless this.played}}
+          <li>
+            <p><span class="label">Title:</span> {{this.game_title}}</p>
+            <p><span class="label">platform:</span> {{this.game_platform}}</p>
+
+            <button class="played" value={{this.id}} data-id={{this.id}}>
+              played!
+            </button>
+
+          </li>
+          {{/unless}}
+          {{/each}}
+
+        </ul>
+      </div>
+
+      <div class="col">
+        <h2>Games plays!</h2>
+
+        <ul id="played">
+          {{#each games}}
+          {{#if played}}
+          <li>
+            <p><span class="label">Title:</span> {{this.game_title}}</p>
+            <p><span class="label">Review:</span> {{this.game_review}}</p>
+            <p><span class="label">Rating:</span> {{this.game_rating}}</p>
+
+          </li>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/profile.js"></script>
+</body>
