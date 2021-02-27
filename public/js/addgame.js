@@ -1,12 +1,11 @@
 $(document).ready(() => {
-  // Getting jQuery references to the post body, title, form, and author select
   const reviewInput = $("#review");
   const platformInput = $("#platform");
   const titleInput = $("#title");
   const ratingInput = $("#rating");
   const cmsForm = $("#cms");
   $(cmsForm).on("submit", handleFormSubmit);
-  let postId;
+  let gameId;
 
   // Sets a flag for whether or not we're updating a post to be false initially
   const updating = false;
@@ -17,27 +16,26 @@ $(document).ready(() => {
       return;
     }
     // Constructing a newPost object to hand to the database
-    const newPost = {
+    const newgame = {
       title: titleInput.val().trim(),
       review: reviewInput.val().trim(),
       rating: ratingInput.val(),
-      platform: platformInput.val().trim(),
-      played: playedInput.val(),
-      userID: $(this).userID
+      platform: platformInput.val().trim()
     };
 
     // If we're updating a post run updatePost to update a post
     // Otherwise run submitPost to create a whole new post
     if (updating) {
-      newPost.id = postId;
-      updatePost(newPost);
+      newgame.id = gameId;
+      updatePost(newgame);
     } else {
-      submitPost(newPost);
+      submitPost(newgame);
     }
   }
   function submitPost(games) {
     $.post("/api/games", games, () => {
       window.location.href = "/profile.html";
+      console.log(newgame);
     });
   }
   function updatePost(games) {
