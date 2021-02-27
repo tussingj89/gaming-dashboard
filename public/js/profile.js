@@ -18,3 +18,13 @@ $(() => {
     });
   });
 });
+
+$(document).ready(() => {
+  const logout = "logout.html";
+  logout.on("/logout", event => {
+    event.req.logout();
+    res.redirect("/");
+  });
+
+  $(".sidenav").sidenav();
+});

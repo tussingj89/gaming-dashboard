@@ -35,7 +35,7 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/games.html", (req, res) => {
+  app.get("/addgame.html", (req, res) => {
     if (req.user) {
       res.render("addgame");
     }
