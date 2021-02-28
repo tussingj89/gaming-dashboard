@@ -5,27 +5,27 @@
         <a href="/" class="brand-logo left neon" data-text="U">GA<span class="flicker-slow">M</span>E<span
             class="flicker-fast">H</span>AVEN</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li>
-          <a href="members.html">Members Lounge</a>
-        </li>
-         <li>
-          <a href="addgame.html">Game List</a>
-        </li>
-        <li>
-          <a href="logout">Log out</a>
-        </li>
-      </ul>
+          <li>
+            <a href="members.html">Members Lounge</a>
+          </li>
+          <li>
+            <a href="addgame.html">Game List</a>
+          </li>
+          <li>
+            <a href="logout">Log out</a>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>
 
-  <div class="container">
-    <h1 class="text-center">Users play list:</h1>
+  <div class="container flow-text">
+    <h1 class="text-center">Users play lists</h1>
 
 
     <div class="row">
-      <div class="col">
-        <h2 class="red-text">Future plays:</h2>
+      <div class="col text-left" style="background-color:rgba(255, 255, 255, 0.76)">
+        <h2>Future Plays:</h2>
         <ul id="not-played">
           {{#each games}}
           {{#unless this.dataValues.played}}
@@ -43,8 +43,8 @@
 
         </ul>
       </div>
-
-      <div class="col">
+    
+      <div class="col text-right" style="background-color:rgba(255, 255, 255, 0.76)">
         <h2 class="red-text">Games played:</h2>
 
         <ul id="played">
@@ -54,7 +54,7 @@
             <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
             <p><span class="label">Review:</span> {{this.dataValues.review}}</p>
             <h5><span class="label">Rating:</span> {{this.dataValues.rating}}</h5>
-            
+
             <button class="edit" data-id="{{this.dataValues.id}}">
               edit
             </button>
@@ -64,6 +64,7 @@
         </ul>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/profile.js"></script>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/profile.js"></script>
 </body>

@@ -34,8 +34,21 @@
   background-size: cover;
   font-family: "Turret Road", cursive;
 }
+
+header {
+  margin-bottom: 4%;
+}
+
 .container { 
-background-color: lightblue;
+background-color:#00bbd4c9;
+border-style: groove;
+border-width: thin;
+padding: 5%;
+margin: auto;
+}
+
+h1,h2 {
+  font-weight: bolder;
 }
 .neon {
   font-family: "Turret Road", cursive;

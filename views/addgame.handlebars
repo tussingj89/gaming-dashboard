@@ -19,27 +19,28 @@
 		</nav>
 	</header>
 
-	<div class="container">
+	<div class="container flow-text">
 
 		<div class="make" align="center">
-			<h2 class="add red-text">Add new game!</h2>
+			<h2 class="add">Add new game!</h2>
 
 			<form id="cms">
-				<div class="form-group">
-					<label for="title">Game Title: required</label>
+				<div style="background-color:rgba(255, 255, 255, 0.76)" class="form-group">
+					<label for="title" class="black-text">Game Title: Required</label>
 					<input placeholder="game-Title" type="text" class="form-control" id="title">
 					<br />
-					<label for="platfrom">platfrom: required</label>
+					<label for="platfrom" class="black-text">Platfrom: Required</label>
 					<input placeholder="platform" class="form-control" rows="1" id="platform"></input>
-					<label for="body">review:</label>
+					<label for="body" class="black-text">Review:</label>
 					<textarea placeholder="game-review" class="form-control" rows="10" id="review"></textarea>
-					<label for="body">rating: 1- 5</label>
+					<label for="body" class="black-text">Rating: 1- 5</label>
 					<input placeholder="game-rating" class="form-control" rows="1" id="rating"></input>
 					<br />
 					<button type="submit" class="btn btn-success submit">Submit</button>
 				</div>
 			</form>
 		</div>
+	</div>
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/addgame.js"></script>
 </body>
