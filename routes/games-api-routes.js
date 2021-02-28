@@ -37,7 +37,6 @@ module.exports = function(app) {
         res.json(dbgames);
       });
   });
-  
   app.put("/api/games/:id", (req, res) => {
     console.log(req.body);
     db.games
