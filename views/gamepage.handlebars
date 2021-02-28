@@ -19,8 +19,8 @@
     </nav>
   </header>
 
-  <div class="container">
-    <h1 class="text-center">public reviews!</h1>
+  <div class="container flow-text">
+    <h1 class="text-center">Public Reviews!</h1>
 
         <ul id="public-reviews">
           {{#each games}}
@@ -31,7 +31,7 @@
             <p><span class="label">review:</span> {{this.dataValues.review}}</p>
             <p><span class="label">rating:</span> {{this.dataValues.rating}}</p>
              <h5><span class="label">User:</span> {{this.dataValues.UserId}}</h5>
-            <br
+            <br>
           </li>
           {{/each}}
 
