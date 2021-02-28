@@ -20,20 +20,20 @@
   </header>
 
   <div class="container">
-    <h1 class="text-center">Profile!</h1>
+    <h1 class="text-center">Users play list:</h1>
 
 
     <div class="row">
       <div class="col">
-        <h2 class="red-text">Future played!</h2>
+        <h2 class="red-text">Future plays:</h2>
         <ul id="not-played">
           {{#each games}}
-          {{#unless this.played}}
+          {{#unless this.dataValues.played}}
           <li>
-            <p><span class="label">Title:</span> {{this.dataValues.title}}</p>
-            <p><span class="label">platform:</span> {{this.dataValues.platform}}</p>
+            <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
+            <h5><span class="label">platform:</span> {{this.dataValues.platform}}</h5>
 
-            <button class="played" value={{this.id}} data-id={{this.id}}>
+            <button class="played" data-id="{{this.dataValues.id}}">
               played!
             </button>
 
@@ -45,17 +45,17 @@
       </div>
 
       <div class="col">
-        <h2 class="red-text">Games plays!</h2>
+        <h2 class="red-text">Games played:</h2>
 
         <ul id="played">
           {{#each games}}
-          {{#if played}}
+          {{#if this.dataValues.played}}
           <li>
-            <p><span class="label">Title:</span> {{this.dataValues.title}}</p>
+            <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
             <p><span class="label">Review:</span> {{this.dataValues.review}}</p>
-            <p><span class="label">Rating:</span> {{this.dataValues.rating}}</p>
+            <h5><span class="label">Rating:</span> {{this.dataValues.rating}}</h5>
             
-            <button class="edit" value={{this.id}} data-id={{this.id}}>
+            <button class="edit" value={{this.id}} data-id="{{this.dataValues.id}}">
               edit
             </button>
           </li>

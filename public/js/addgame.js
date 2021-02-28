@@ -37,7 +37,7 @@ $(document).ready(() => {
   function submitPost(games) {
     $.post("/api/games", games, () => {
       window.location.href = "/profile.html";
-      console.log(newgame);
+      // console.log(newgame);
     });
   }
   function updatePost(games) {

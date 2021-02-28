@@ -4,8 +4,7 @@ module.exports = function(app) {
   // GET route for getting all of the games
   app.get("/gamepage.html", (req, res) => {
     db.games.findAll({}).then(data => {
-      console.log(data);
-      // console.log(dataValues);
+      // console.log(data);
       // res.json(data);
       res.render("gamepage", { games: data });
     });
@@ -19,7 +18,7 @@ module.exports = function(app) {
         }
       })
       .then(data => {
-        console.log(data);
+        // console.log(data);
         res.render("profile", { games: data });
       });
   });
@@ -38,7 +37,19 @@ module.exports = function(app) {
         res.json(dbgames);
       });
   });
-
+  
+  app.put("/api/games/:id", (req, res) => {
+    console.log(req.body);
+    db.games
+      .update(req.body, {
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(dbgames => {
+        res.json(dbgames);
+      });
+  });
   app.put("/api/games", (req, res) => {
     db.games
       .update(req.body, {
