@@ -25,10 +25,11 @@
         <ul id="public-reviews">
           {{#each games}}
           <li>
-            <p><span class="label">Title:</span> {{this.game_title}}</p>
-            <p><span class="label">platform:</span> {{this.game_platform}}</p>
-            <p><span class="label">review:</span> {{this.game_review}}</p>
-            <p><span class="label">rating:</span> {{this.game_rating}}</p>
+            <p><span class="label">Title:</span> {{this.dataValues.title}}</p>
+            <p><span class="label">platform:</span> {{this.dataValues.platform}}</p>
+            <p><span class="label">review:</span> {{this.dataValues.review}}</p>
+            <p><span class="label">rating:</span> {{this.dataValues.rating}}</p>
+             <p><span class="label">User:</span> {{this.dataValues.UserId}}</p>
 
           </li>
           {{/each}}

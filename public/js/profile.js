@@ -2,6 +2,7 @@ $(() => {
   $(".played").on("click", function(event) {
     event.preventDefault();
     console.log("played button clicked");
+    // console.log(this);
     const id = $(this).data("id");
 
     const newPlayedState = {
@@ -17,14 +18,14 @@ $(() => {
       location.reload();
     });
   });
-});
 
-$(document).ready(() => {
-  const logout = "logout.html";
-  logout.on("/logout", event => {
-    event.req.logout();
-    res.redirect("/");
+  $(".edit").on("click", event => {
+    event.preventDefault();
+    console.log("edit button clicked");
+    const currentGame = $(this)
+      .parent()
+      .parent()
+      .data("game");
+    window.location.href = "" + currentGame.id;
   });
-
-  $(".sidenav").sidenav();
 });
