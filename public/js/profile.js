@@ -22,14 +22,10 @@ $(() => {
   $(".edit").on("click", event => {
     event.preventDefault();
     console.log("edit button clicked");
-    // const id = $(this).data("id");
+    const currentGame = $(this)
+      .parent()
+      .parent()
+      .data("game");
+    window.location.href = "" + currentGame.id;
   });
-  // console.log(this);
-  // function updategame() {
-  //   const currentGame = $(this)
-  //     .parent()
-  //     .parent()
-  //     .data("game");
-  //   window.location.href = "/cms?post_id=" + currentGame.id;
-  // }
 });
