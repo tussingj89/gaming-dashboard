@@ -12,6 +12,33 @@ $(document).ready(() => {
   // Sets a flag for whether or not we're updating a post to be false initially
   const updating = false;
 
+  // if (url.indexOf("?game_id=") !== -1) {
+  //   gameId = url.split("=")[1];
+  //   getGameData(gameId, "game");
+  // }
+  // function getGameData(id, type) {
+  //   let queryUrl;
+  //   switch (type) {
+  //   case "game":
+  //     queryUrl = "/api/posts/" + id;
+  //     break;
+  //     case "user":
+  //     queryUrl = "/api/user/" + id;
+  //     break;
+  //   default:
+  //     return;
+  //   }
+  //   $.get(queryUrl, data => {
+  //     if (data) {
+  //       console.log(data.userId || data.id);
+  //       // If this post exists, prefill our cms forms with its data
+  //       titleInput.val(data.title);
+  //       reviewInput.val(data.review);
+  //       userId = data.userId || data.id;
+  //       updating = true;
+  //     }
+  //   });
+  // }
   function handleFormSubmit(event) {
     event.preventDefault();
     if (!titleInput.val().trim() || !platformInput.val().trim()) {
@@ -40,13 +67,15 @@ $(document).ready(() => {
       // console.log(newgame);
     });
   }
-  function updatePost(games) {
-    $.ajax({
-      method: "PUT",
-      url: "/api/games",
-      data: games
-    }).then(() => {
-      window.location.href = "/profile.html";
-    });
-  }
+
+  //   function updatePost(games) {
+  //     $.ajax({
+  //       method: "PUT",
+  //       url: "/api/games",
+  //       data: games
+  //     }).then(() => {
+  //       window.location.href = "/profile.html";
+  //     });
+  //   }
+  // });
 });
