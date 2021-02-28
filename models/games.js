@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     review: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
       len: [1]
     },
     platform: {
@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     rating: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     played: {
       type: DataTypes.BOOLEAN,

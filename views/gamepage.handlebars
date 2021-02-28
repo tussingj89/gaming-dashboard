@@ -24,13 +24,14 @@
 
         <ul id="public-reviews">
           {{#each games}}
+          {{!-- {{#unless this.dataValues.review = null}} --}}
           <li>
-            <p><span class="label">Title:</span> {{this.dataValues.title}}</p>
-            <p><span class="label">platform:</span> {{this.dataValues.platform}}</p>
+            <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
+            <h5><span class="label">platform:</span> {{this.dataValues.platform}}</h5>
             <p><span class="label">review:</span> {{this.dataValues.review}}</p>
             <p><span class="label">rating:</span> {{this.dataValues.rating}}</p>
-             <p><span class="label">User:</span> {{this.dataValues.UserId}}</p>
-
+             <h5><span class="label">User:</span> {{this.dataValues.UserId}}</h5>
+            <br
           </li>
           {{/each}}
 
