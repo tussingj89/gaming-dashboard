@@ -9,7 +9,7 @@ module.exports = function(app) {
       res.render("gamepage", { games: data });
     });
   });
-
+  // GET Route for getting games by the user
   app.get("/profile.html", (req, res) => {
     db.games
       .findAll({
@@ -22,7 +22,7 @@ module.exports = function(app) {
         res.render("profile", { games: data });
       });
   });
-  // POST route for saving a new post
+  // POST route for saving a new games
   app.post("/api/games", (req, res) => {
     // console.log(req.user.id);
     db.games
@@ -37,8 +37,9 @@ module.exports = function(app) {
         res.json(dbgames);
       });
   });
+  // PUT route for updating game
   app.put("/api/games/:id", (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     db.games
       .update(req.body, {
         where: {
@@ -49,9 +50,23 @@ module.exports = function(app) {
         res.json(dbgames);
       });
   });
+  // PUt route for updating the game
   app.put("/api/games", (req, res) => {
+    // console.log(req.body);
     db.games
       .update(req.body, {
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(dbgames => {
+        res.json(dbgames);
+      });
+  });
+  // GET route for getting game by id number
+  app.get("/api/games/:id", (req, res) => {
+    db.games
+      .findOne(req.body, {
         where: {
           id: req.body.id
         }
