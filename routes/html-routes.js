@@ -10,7 +10,6 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members.html");
     }
-    //res.sendFile(path.join(__dirname, "../public/signup.html"));
     res.render("index");
   });
 
@@ -32,12 +31,6 @@ module.exports = function(app) {
   app.get("/addgame.html", (req, res) => {
     if (req.user) {
       res.render("addgame");
-    }
-  });
-
-  app.get("/gamepage.html", (req, res) => {
-    if (req.user) {
-      res.render("gamepage");
     }
   });
 

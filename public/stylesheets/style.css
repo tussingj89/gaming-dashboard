@@ -94,7 +94,21 @@ h1,h2 {
     opacity: 0.4;
   }
 }
-
-.centered {
-  margin: 10% 50% 49% 50%;
+.INI {
+  margin-bottom: 10%;
+  margin-left: 10%;
 }
+
+
+.row1 {
+  margin-left: 47%;
+}
+
+.row2 {
+  margin-left: 52%;
+}
+
+::placeholder {
+  color: black;
+}
+
