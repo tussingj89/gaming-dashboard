@@ -23,16 +23,16 @@
   </header>
 
   <div class="container flow-text">
-    <h1 class="text-center">Users play lists</h1>
+    <h1 style="background-color:#00e1ffda; text-align:center;">Users play lists</h1>
 
 
     <div class="row">
       <div class="col text-left" style="background-color:rgba(255, 255, 255, 0.76)">
-        <h2>Future Plays:</h2>
+        <h2 style="text-align:left;">Future Plays:</h2>
         <ul id="not-played">
           {{#each games}}
           {{#unless this.dataValues.played}}
-          <li>
+          <listyle="text-align:left;">
             <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
             <h5><span class="label">platform:</span> {{this.dataValues.platform}}</h5>
 
@@ -48,12 +48,12 @@
       </div>
 
       <div class="col text-right" style="background-color:rgba(255, 255, 255, 0.76)">
-        <h2 class="red-text">Games played:</h2>
+        <h2 class="red-text" style="text-align:right;">Games played:</h2>
 
         <ul id="played">
           {{#each games}}
           {{#if this.dataValues.played}}
-          <li>
+          <li style="text-align:left;">
             <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
             <p><span class="label">Review:</span> {{this.dataValues.review}}</p>
             <h5><span class="label">Rating:</span> {{this.dataValues.rating}}</h5>
