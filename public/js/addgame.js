@@ -28,7 +28,6 @@ $(document).ready(() => {
         reviewInput.val(data.review);
         platformInput.val(data.platfrom);
         ratingInput.val(data.rating);
-        userId = data.userId || data.id;
         updating = true;
       }
     });
