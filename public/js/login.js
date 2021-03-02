@@ -4,8 +4,6 @@ $(document).ready(() => {
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
 
-  // $(".sidenav").sidenav();
-
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", event => {
     event.preventDefault();
@@ -38,4 +36,8 @@ $(document).ready(() => {
         console.log(err);
       });
   }
+});
+
+$(document).ready(() => {
+  $(".sidenav").sidenav();
 });

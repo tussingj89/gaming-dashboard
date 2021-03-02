@@ -7,7 +7,6 @@ $(document).ready(() => {
   $(cmsForm).on("submit", handleFormSubmit);
   let gameId;
   const url = window.location.search;
-  // $(".sidenav").sidenav();
 
   // Sets a flag for whether or not we're updating a post to be false initially
   let updating = false;
@@ -69,4 +68,8 @@ $(document).ready(() => {
       window.location.href = "/profile.html";
     });
   }
+});
+
+$(document).ready(() => {
+  $(".sidenav").sidenav();
 });
