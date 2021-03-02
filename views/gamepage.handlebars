@@ -32,18 +32,20 @@
   <div class="container flow-text">
     <h1 class="text-center" style="background-color:#00e1ffda; text-align:center;">Public Reviews!</h1>
 
-    <ul id="public-reviews" style="background-color:#f0f0f0da;">
-      {{#each games}}
-      {{!-- {{#unless this.dataValues.review = null}} --}}
-      <li>
-        <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
-        <h5><span class="label">platform:</span> {{this.dataValues.platform}}</h5>
-        <p><span class="label">review:</span> {{this.dataValues.review}}</p>
-        <p><span class="label">rating:</span> {{this.dataValues.rating}}</p>
-        <h5><span class="label">User:</span> {{this.dataValues.UserId}}</h5>
-        <br>
-      </li>
-      {{/each}}
+        <ul id="public-reviews" style="background-color:#f0f0f0da;">
+          {{#each games}}
+          {{!-- {{#with reviews}} --}}
+          <li>
+            <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
+            <h5><span class="label">platform:</span> {{this.dataValues.platform}}</h5>
+            <p><span class="label">review:</span> {{this.dataValues.review}}</p>
+            <p><span class="label">rating:</span> {{this.dataValues.rating}}</p>
+             <h5><span class="label">User:</span> {{this.dataValues.UserId}}</h5>
+            <br>
+          </li>
+          {{!-- {{/with}} --}}
+          {{/each}}
+
 
     </ul>
   </div>

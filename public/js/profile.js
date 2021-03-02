@@ -24,10 +24,6 @@ $(() => {
     console.log("edit button clicked");
     console.log(event.target);
     const id = $(event.target).data("id");
-    // const currentGame = $(this)
-    //   .parent()
-    //   .parent()
-    //   .data("game");
     console.log(id);
     window.location.href = "/addgame.html?game_id=" + id;
   });

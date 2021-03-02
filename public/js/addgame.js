@@ -21,11 +21,10 @@ $(document).ready(() => {
 
     $.get(queryUrl, data => {
       if (data) {
-        // console.log(data.userId || data.id);
-        // If this post exists, prefill our cms forms with its data
+        console.log(data);
         titleInput.val(data.title);
         reviewInput.val(data.review);
-        platformInput.val(data.platfrom);
+        platformInput.val(data.platform);
         ratingInput.val(data.rating);
         updating = true;
       }
@@ -63,7 +62,7 @@ $(document).ready(() => {
   function updatePost(games) {
     $.ajax({
       method: "PUT",
-      url: "/api/games",
+      url: "/api/games/" + gameId,
       data: games
     }).then(() => {
       window.location.href = "/profile.html";
