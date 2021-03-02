@@ -2,44 +2,52 @@
   <header>
     <nav>
       <div class="nav-wrapper cyan">
-        <a href="/" class="brand-logo left neon" data-text="U">GA<span class="flicker-slow">M</span>E<span
+        <a href="/" class="brand-logo center neon" data-text="U">GA<span class="flicker-slow">M</span>E<span
             class="flicker-fast">H</span>AVEN</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li>
-						<a href="profile.html">Profile</a>
-					</li>
-        <li>
-          <a href="members.html">News</a>
-        </li>
-         <li>
-          <a href="addgame.html">Game List</a>
-        </li>
-        <li>
-          <a href="logout">Log out</a>
-        </li>
-      </ul>
+            <a href="profile.html">Profile</a>
+          </li>
+          <li>
+            <a href="members.html">News</a>
+          </li>
+          <li>
+            <a href="addgame.html">Add Game</a>
+          </li>
+          <li>
+            <a href="logout">Log out</a>
+          </li>
+        </ul>
       </div>
     </nav>
+    <ul class="sidenav" id="mobile-demo">
+       <li><a href="profile.html">Profile</a></li>
+       <li><a href="members.html">News</a></li>
+      <li><a href="addgame.html">Add Game</a></li>
+      <li><a href="logout">Log out</a></li>        
+    </ul>
   </header>
 
   <div class="container flow-text">
     <h1 class="text-center" style="background-color:#00e1ffda; text-align:center;">Public Reviews!</h1>
 
-        <ul id="public-reviews" style="background-color:#f0f0f0da;">
-          {{#each games}}
-          {{!-- {{#unless this.dataValues.review = null}} --}}
-          <li>
-            <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
-            <h5><span class="label">platform:</span> {{this.dataValues.platform}}</h5>
-            <p><span class="label">review:</span> {{this.dataValues.review}}</p>
-            <p><span class="label">rating:</span> {{this.dataValues.rating}}</p>
-             <h5><span class="label">User:</span> {{this.dataValues.UserId}}</h5>
-            <br>
-          </li>
-          {{/each}}
+    <ul id="public-reviews" style="background-color:#f0f0f0da;">
+      {{#each games}}
+      {{!-- {{#unless this.dataValues.review = null}} --}}
+      <li>
+        <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
+        <h5><span class="label">platform:</span> {{this.dataValues.platform}}</h5>
+        <p><span class="label">review:</span> {{this.dataValues.review}}</p>
+        <p><span class="label">rating:</span> {{this.dataValues.rating}}</p>
+        <h5><span class="label">User:</span> {{this.dataValues.UserId}}</h5>
+        <br>
+      </li>
+      {{/each}}
 
-        </ul>
-      </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/profile.js"></script>
+    </ul>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/profile.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>

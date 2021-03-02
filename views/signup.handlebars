@@ -1,14 +1,19 @@
-<body class= body2>
+<body class=body2>
   <header>
     <nav>
-        <div class="nav-wrapper cyan">
-          <a href="/" class="brand-logo left neon" data-text="U">GA<span class="flicker-slow">M</span>E<span class="flicker-fast">H</span>AVEN</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="login.html">Login</a></li>
-          </ul>
-        </div>
-      </nav>
-</header>
+      <div class="nav-wrapper cyan">
+        <a href="/" class="brand-logo center neon" data-text="U">GA<span class="flicker-slow">M</span>E<span
+            class="flicker-fast">H</span>AVEN</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+     <li><a href="login.html">Login</a></li>
+    </ul>
+  </header>
   <div class="container">
     <div class="row " style="background-color:rgba(255, 255, 255, 0.76)">
       <div class="col-md-6 col-md-offset-3 black-text">
@@ -18,7 +23,8 @@
             <input type="email" class="form-control" id="email-input" style="font-weight: bold;" placeholder="Email">
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" id="password-input" style="font-weight: bold;" placeholder="Password">
+            <input type="password" class="form-control" id="password-input" style="font-weight: bold;"
+              placeholder="Password">
           </div>
           <div style="display: none" id="alert" class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -34,6 +40,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/signup.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
-
