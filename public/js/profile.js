@@ -32,3 +32,7 @@ $(() => {
     window.location.href = "/addgame.html?game_id=" + id;
   });
 });
+
+$(document).ready(() => {
+  $(".sidenav").sidenav();
+});

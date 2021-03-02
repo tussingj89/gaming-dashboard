@@ -2,8 +2,9 @@
   <header>
     <nav>
       <div class="nav-wrapper cyan">
-        <a href="/" class="brand-logo left neon" data-text="U">GA<span class="flicker-slow">M</span>E<span
+        <a href="/" class="brand-logo center neon" data-text="U">GA<span class="flicker-slow">M</span>E<span
             class="flicker-fast">H</span>AVEN</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li>
             <a href="members.html">News</a>
@@ -20,6 +21,20 @@
         </ul>
       </div>
     </nav>
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <a href="members.html">News</a>
+      </li>
+      <li>
+        <a href="addgame.html">Add Game</a>
+      </li>
+      <li>
+        <a href="gamepage.html">Public Reviews</a>
+      </li>
+      <li>
+        <a href="logout">Log out</a>
+      </li>
+    </ul>
   </header>
 
   <div class="container flow-text">
@@ -27,17 +42,17 @@
 
 
     <div class="row">
-      <div class="col text-left" style="background-color:rgba(255, 255, 255, 0.76)">
-        <h2 style="text-align:left;">Future Plays:</h2>
+      <div class="col future" style="background-color:rgba(255, 255, 255, 0.76)">
+        <h2 style="text-align:left; ">Future Plays:</h2>
         <ul id="not-played">
           {{#each games}}
           {{#unless this.dataValues.played}}
-          <listyle="text-align:left;">
+          <li style="text-align:left;">
             <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
             <h5><span class="label">platform:</span> {{this.dataValues.platform}}</h5>
 
             <button class="played" data-id="{{this.dataValues.id}}">
-              played!
+              Played!
             </button>
 
           </li>
@@ -47,19 +62,19 @@
         </ul>
       </div>
 
-      <div class="col text-right" style="background-color:rgba(255, 255, 255, 0.76)">
+      <div class="col played" style="background-color:rgba(255, 255, 255, 0.76)">
         <h2 class="red-text" style="text-align:right;">Games played:</h2>
 
         <ul id="played">
           {{#each games}}
           {{#if this.dataValues.played}}
-          <li style="text-align:left;">
+          <li style="text-align:left; font-size:medium;">
             <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
             <p><span class="label">Review:</span> {{this.dataValues.review}}</p>
             <h5><span class="label">Rating:</span> {{this.dataValues.rating}}</h5>
 
             <button class="edit" data-id="{{this.dataValues.id}}">
-              edit
+              Edit
             </button>
           </li>
           {{/if}}
@@ -70,4 +85,5 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/profile.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>

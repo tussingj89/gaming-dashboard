@@ -41,6 +41,6 @@ $(document).ready(() => {
   }
 });
 
-// $(document).ready(() => {
-//   $(".sidenav").sidenav();
-// });
+$(document).ready(() => {
+  $(".sidenav").sidenav();
+});

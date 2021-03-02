@@ -1,22 +1,30 @@
-<body class= body4>
+<body class=body4>
   <nav>
     <div class="nav-wrapper cyan">
-      <a href="/" class="brand-logo left neon" data-text="U">GA<span class="flicker-slow">M</span>E<span class="flicker-fast">H</span>AVEN</a>
+      <a href="/" class="brand-logo center neon" data-text="U">GA<span class="flicker-slow">M</span>E<span
+          class="flicker-fast">H</span>AVEN</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="signup.html">Sign Up Now!</a></li>
       </ul>
     </div>
   </nav>
+  <ul class="sidenav" id="mobile-demo">
+   <li><a href="signup.html">Sign Up Now!</a></li>
+  </ul>
+
   <div class="container">
     <div class="row" style="background-color:rgba(255, 255, 255, 0.76)">
       <div class="col-md-6 col-md-offset-3 black-text text-accent-2">
         <h2>Login Form</h2>
         <form class="login center">
           <div class="form-group center">
-            <input type="email" class="form-control black-text" style="font-weight: bold;" id="email-input" placeholder="Email Address">
+            <input type="email" class="form-control black-text" style="font-weight: bold;" id="email-input"
+              placeholder="Email Address">
           </div>
           <div class="form-group center">
-            <input type="password" class="form-control black-text" style="font-weight: bold;" id="password-input" placeholder="Password">
+            <input type="password" class="form-control black-text" style="font-weight: bold;" id="password-input"
+              placeholder="Password">
           </div>
           <button type="submit" class="btn btn-default ">Login</button>
         </form>
@@ -28,5 +36,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
