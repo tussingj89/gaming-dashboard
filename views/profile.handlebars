@@ -43,7 +43,7 @@
 
     <div class="row">
       <div class="col future" style="background-color:rgba(255, 255, 255, 0.76)">
-        <h2 style="text-align:left; ">Future Plays:</h2>
+        <h2>Future Plays:</h2>
         <ul id="not-played">
           {{#each games}}
           {{#unless this.dataValues.played}}
@@ -63,7 +63,7 @@
       </div>
 
       <div class="col played" style="background-color:rgba(255, 255, 255, 0.76)">
-        <h2 class="red-text" style="text-align:right;">Games played:</h2>
+        <h2 class="red-text">Games played:</h2>
 
         <ul id="played">
           {{#each games}}
