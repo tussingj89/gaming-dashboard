@@ -30,7 +30,7 @@ module.exports = function(app) {
         title: req.body.title,
         review: req.body.review,
         platform: req.body.platform,
-        rating: req.body.rating,
+        rating: req.body.rating || null,
         UserId: req.user.id
       })
       .then(dbgames => {

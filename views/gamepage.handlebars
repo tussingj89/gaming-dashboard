@@ -34,7 +34,7 @@
 
         <ul id="public-reviews" style="background-color:#f0f0f0da;">
           {{#each games}}
-          {{!-- {{#with reviews}} --}}
+          {{#if this.dataValues.review}}
           <li>
             <h4><span class="label">Title:</span> {{this.dataValues.title}}</h4>
             <h5><span class="label">platform:</span> {{this.dataValues.platform}}</h5>
@@ -43,7 +43,7 @@
              <h5><span class="label">User:</span> {{this.dataValues.UserId}}</h5>
             <br>
           </li>
-          {{!-- {{/with}} --}}
+          {{/if}}
           {{/each}}
 
 
