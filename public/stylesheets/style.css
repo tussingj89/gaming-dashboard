@@ -55,7 +55,6 @@ h1,h2 {
   font-size: 130px;
   color: #ffd5ff;
   position: absolute;
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
@@ -99,6 +98,7 @@ h1,h2 {
   margin-left: 10%;
 }
 
+
 .played.future {
   padding: 5%;
   border: groove;
@@ -107,6 +107,7 @@ h1,h2 {
 
 .row1 {
   margin-left: 47%;
+  
 }
 
 .row2 {
@@ -115,5 +116,10 @@ h1,h2 {
 
 ::placeholder {
   color: black;
+  font-size: medium;
+}
+
+.sidenav {
+  background-color:#00bbd4c9;
 }
 
