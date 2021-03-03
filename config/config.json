@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Wesley_1989",
+    "password": "",
     "database": "haven_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
