@@ -107,6 +107,7 @@ h1,h2 {
 
 .row1 {
   margin-left: 47%;
+  
 }
 
 .row2 {
@@ -116,5 +117,9 @@ h1,h2 {
 ::placeholder {
   color: black;
   font-size: medium;
+}
+
+.sidenav {
+  background-color:#00bbd4c9;
 }
 
