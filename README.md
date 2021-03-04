@@ -26,7 +26,7 @@
   This project's purpose is to allow gamers a place to store their game lists and read other gamers' reviews of games they have played.
 
   ## Technologies Used:
-  Node, Sequelize, Express, Handlebars, ORMS, MYSQL, Heroku, and JAWSDB
+  Node, Sequelize, Express, Handlebars, ORMS, MYSQL, Heroku, JAWSDB, Husky, and Nodemon
 
   ## Code Sample
   In the sample code below, you can see how we used Sequelize ORMS to make calls to the database for creating and retrieving information.
